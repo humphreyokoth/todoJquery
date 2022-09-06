@@ -1,10 +1,12 @@
-
-
 $(document).ready(function(){
+  
   // Add item to list
 $(".submit").click(function(e){
   e.preventDefault();
-    const input = $(this).val();
+   
+    const input = $("#input-add").val();
+    console.log(input);
+    //const input = $("#add-new-to-do-item").val();
     $("ul").append('<li>'+ input +  '<input type="checkbox" name="checkbox" id="list-1" /> <i class= "fa-solid fa-trash-can"> </i> <i class="fa-solid fa-pencil"></i> </li>');
     $(this).val(input);
 })
@@ -18,4 +20,3 @@ $("ul").on("click",".fa-pencil",function(){
    $(this).parent("li").remove();
   })
 })
-
